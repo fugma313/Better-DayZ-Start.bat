@@ -30,7 +30,8 @@ if %ERRORLEVEL% equ 1 (goto :restart-dayzserver)
 goto :loop
 
 :restart-dayzserver
-:: To add mods, use the line below. Using multiple mods (or servermods) should look like this (including the quotes): "-mod=%DayZ_Path%\Mod_1_Folder;%DayZ_Path%\Mod_2_Folder" 
+cd %DayZ_Path%
+:: To add mods, use the line below.
 start /HIGH "DayZ Server" /MIN "%DayZ_Path%\%EXE_Name%" "-config=%DayZ_Path%\%ServerCFG%" -port=%Game_Port% "-bePath=%DayZ_Path%\battleye" "-servermod=" "-mod=" -profiles=%Profiles% -cpuCount=%CPUCores% -doLogs -adminlog -freezecheck
 echo (%time%) DayZServer started
 goto :loop
