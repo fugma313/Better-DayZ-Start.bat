@@ -32,6 +32,6 @@ goto :loop
 :restart-dayzserver
 cd %DayZ_Path%
 :: To add mods, use the line below.
-start /HIGH "DayZ Server" /MIN "%DayZ_Path%\%EXE_Name%" "-config=%DayZ_Path%\%ServerCFG%" -port=%Game_Port% "-bePath=%DayZ_Path%\battleye" "-servermod=" "-mod=" -profiles=%Profiles% -cpuCount=%CPUCores% -doLogs -adminlog -freezecheck
+start /HIGH "DayZ Server" /MIN "%DayZ_Path%\%EXE_Name%" "-config=%DayZ_Path%\%ServerCFG%" -port=%GamePort% "-bePath=%DayZ_Path%\battleye" "-servermod=" "-mod=" -profiles=%Profiles% -cpuCount=%CPUCores% -doLogs -adminlog -freezecheck
 echo (%time%) DayZServer started
 goto :loop
